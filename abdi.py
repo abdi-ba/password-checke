@@ -143,12 +143,15 @@ def main():
         input()
 
 main()
-# ... all your other functions (banner, check_password, etc.) ...
+# ... all your imports and color variables ...
 
 def main():
     banner()
-    # Your main logic here
-    # (The code that was previously at the bottom of your script)
+    # ALL your existing logic from the bottom of your script 
+    # (the 'while True' loop and inputs) goes here.
+    while True:
+        password = input(CYAN + "  🔑  Password: " + RESET)
+        # ... rest of your code ...
 
 if __name__ == "__main__":
     main()
