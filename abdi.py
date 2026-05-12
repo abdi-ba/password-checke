@@ -143,3 +143,12 @@ def main():
         input()
 
 main()
+# ... all your other functions (banner, check_password, etc.) ...
+
+def main():
+    banner()
+    # Your main logic here
+    # (The code that was previously at the bottom of your script)
+
+if __name__ == "__main__":
+    main()
