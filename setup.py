@@ -6,7 +6,7 @@ setup(
     py_modules=["abdi"],  
     entry_points={
         'console_scripts': [
-            'abdi-check = abdi:main', 
+            'abdi-check=abdi:main', 
         ],
     },
 )
