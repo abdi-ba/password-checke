@@ -142,7 +142,7 @@ def main():
         print(WHITE + "  Check another password? " + DIM + "(press Enter to continue)" + RESET)
         input()
 
-main()
+
 # ... all your imports and color variables ...
 
 def main():
