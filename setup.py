@@ -3,10 +3,10 @@ from setuptools import setup
 setup(
     name="abdi-check",
     version="1.0",
-    py_modules=["abdi"],  # This MUST match the filename abdi.py
+    py_modules=["abdi"],  
     entry_points={
         'console_scripts': [
-            'abdi-check = abdi:main', # This links the command to the main() function
+            'abdi-check = abdi:main', 
         ],
     },
 )
