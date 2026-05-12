@@ -112,46 +112,32 @@ def show_results(password):
 
     divider()
 
-def main():
-    banner()
-    print(DIM + "  Analyze your passwords locally. Nothing is stored." + RESET)
-    print()
+import string
+import time
 
-    while True:
-        print(WHITE + "  Enter a password to check" + RESET)
-        print(DIM + "  (type 'quit' to exit)" + RESET)
-        print()
-
-        password = input(CYAN + "  🔑  Password: " + RESET)
-
-        if password.lower() == "quit":
-            print()
-            print(CYAN + BOLD + "  Goodbye! Stay safe online. 🔐" + RESET)
-            print()
-            break
-
-        if password == "":
-            print(RED + "\n  ⚠  Please enter a password.\n" + RESET)
-            continue
-
-        print(DIM + "\n  Analyzing..." + RESET)
-        time.sleep(0.6)
-
-        show_results(password)
-
-        print(WHITE + "  Check another password? " + DIM + "(press Enter to continue)" + RESET)
-        input()
-
-# ... (all your imports and existing functions like banner, etc.)
+# ... (Keep all your color variables RED, YELLOW, etc.)
+# ... (Keep all your functions divider, check_password, show_results, banner)
 
 def main():
     banner()
-    # Put all your interactive code (the while loop) inside here
+    print("\033[2m  Analyze your passwords locally. Nothing is stored.\033[0m\n")
     while True:
+        print("\033[97m  Enter a password to check\033[0m")
+        print("\033[2m  (type 'quit' to exit)\033[0m\n")
         password = input("\033[96m  🔑  Password: \033[0m")
         if password.lower() == "quit":
+            print("\n\033[96m\033[1m  Goodbye! Stay safe online. 🔐\033[0m\n")
             break
+        if password == "":
+            print("\033[91m\n  ⚠  Please enter a password.\n\033[0m")
+            continue
+        print("\033[2m\n  Analyzing...\033[0m")
+        time.sleep(0.6)
         show_results(password)
+        print("\033[97m  Check another password? \033[2m(press Enter to continue)\033[0m")
+        input()
 
+# THIS IS THE PERFECT SOLUTION: 
+# It prevents the installer from getting stuck in the 'while' loop.
 if __name__ == "__main__":
     main()
