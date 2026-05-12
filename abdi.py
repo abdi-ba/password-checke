@@ -142,16 +142,16 @@ def main():
         print(WHITE + "  Check another password? " + DIM + "(press Enter to continue)" + RESET)
         input()
 
-
-# ... all your imports and color variables ...
+# ... (all your imports and existing functions like banner, etc.)
 
 def main():
     banner()
-    # ALL your existing logic from the bottom of your script 
-    # (the 'while True' loop and inputs) goes here.
+    # Put all your interactive code (the while loop) inside here
     while True:
-        password = input(CYAN + "  🔑  Password: " + RESET)
-        # ... rest of your code ...
+        password = input("\033[96m  🔑  Password: \033[0m")
+        if password.lower() == "quit":
+            break
+        show_results(password)
 
 if __name__ == "__main__":
     main()
