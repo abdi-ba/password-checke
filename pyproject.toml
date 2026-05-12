@@ -1,1 +1,7 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
 
+[project]
+name = "abdi-check"
+version = "1.0"
